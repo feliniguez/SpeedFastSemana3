@@ -3,6 +3,7 @@ public abstract class Pedido {
     private int idPedido;
     private String direccionEntrega;
     private double distanciaKm;
+    private String estado = "PENDIENTE";
 
     public Pedido(int idPedido, String direccionEntrega, double distanciaKm) {
         this.idPedido = idPedido;
@@ -32,6 +33,14 @@ public abstract class Pedido {
 
     public void setDistanciaKm(double distanciaKm) {
         this.distanciaKm = distanciaKm;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String nuevoEstado) {
+        this.estado = nuevoEstado;
     }
 
     public void mostrarResumen() {
